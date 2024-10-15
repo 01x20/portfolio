@@ -1,0 +1,47 @@
+@use 'root';
+
+//반응형 - mobile first
+@mixin tablet {
+  @media screen and (min-width: #{root.$breakpoint-m}) {
+    @content;
+  }
+}
+@mixin desktop {
+    @media screen and (min-width: #{root.$breakpoint-w}) {
+        @content;
+    }
+}
+@mixin default-form {
+  width: 100%; height: 48px; line-height: 48px; border-radius: 6px;
+
+  @include desktop {
+    height: 56px; line-height: 56px;
+  }
+}
+
+//position
+@mixin pos-center {
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+@mixin pos-x-center {
+  left: 50%; transform: translateX(-50%);
+}
+@mixin pos-y-center {
+  top: 50%; transform: translateY(-50%);
+}
+
+//말 줄임 - 2줄 처리
+@mixin dot-vertical-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+//말 줄임 - 1줄 처리
+@mixin dot-dot-dot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

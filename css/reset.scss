@@ -1,0 +1,65 @@
+@use 'root';
+
+* {
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  margin:0;
+  padding: 0;
+}
+
+em,del,pre,strong,ul,li,dl,dt,table,tbody,thead,tfoot,nav,main,menu,p {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+ul, ol, dl, dt, dd, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration {
+  display: none;
+  -webkit-appearance: none
+}
+
+a {
+  text-decoration: none;
+  color: root.$text-default;
+  cursor: pointer
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+img {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+pre {
+   white-space: pre-wrap;
+}
