@@ -61,3 +61,12 @@ ScrollTrigger.create({
         self.direction === -1 ? showNav.play() : showNav.reverse();
     }
 });
+
+let varInterval;
+$(window).blur(function() {
+    clearInterval(varInterval);
+});
+$(window).focus(function() {
+    clearInterval(varInterval);
+    varInterval = setInterval(circleFn, 3000);
+});
