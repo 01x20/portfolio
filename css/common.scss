@@ -30,7 +30,6 @@ html, body {
 
 body {
   -ms-overflow-style: none;
-  background: root.$color-black;
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +37,7 @@ body {
 }
 
 pre {
-  font-family: "Pretendard", sans-serif;
+  font-family: "GmarketSans", sans-serif;
   line-height: 1.6;
 }
 
@@ -56,161 +55,9 @@ pre {
 }
 /* ## 텍스트 컬러 공통 end ## */
 
-
-/* ## input style 공통 start ## */
-input, select, textarea {
-  @include default-font; @include mixin.default-form;
-  border: 1px solid root.$color-gray;
-  padding: 0 14px;
-
-  &::placeholder {color: root.$text-gray;}
-}
-
-textarea {resize: none; height: auto; line-height: inherit; padding: 10px 14px;}
-select {
-  appearance:none;
-  background: #fff url('img/icons/ico-select-arrow.svg') no-repeat right 14px center;
-  background-size: 14px;
-}
-
-@include mixin.desktop {
-  input, select, textarea {font-size: 14px; padding: 0 20px;}
-  select {
-    background-position: right 20px center;
-    background-size: 16px;
-  }
-}
-/* ## input style 공통 end ## */
-
 /* ## button box start ## */
 button {@include default-font; @include mixin.default-form;}
-
-.button-box {
-  &.fix-type {
-    width: 100%;
-    padding: 20px 16px 40px;
-    background: root.$color-white;
-    position: fixed;
-    bottom: 0;
-    @include mixin.pos-x-center;
-
-    &.sub-fix {
-      bottom: 0;
-      &.not-app {
-        bottom: 50px;
-      }
-    }
-  }
-  .btn {
-    &.common-type {
-      background: root.$color-green;
-      color: root.$color-white;
-      font-weight: root.$font-bold;
-    }
-    &.border-type {
-      color: root.$text-default;
-      border: 1px solid #D0D4DB;
-    }
-    &.file-type {
-      background: root.$border-gray;
-      border: 1px solid #D0D4DB;
-      color: root.$text-gray;
-
-      .file-num {
-        position: relative;
-        padding-left: 23px;
-        display: inline-block;
-        width: auto;
-
-        &:before {
-          position: absolute;
-          content: '';
-          width: 18px;
-          height: 15px;
-          background: url('img/icons/ico-camera.svg') 0 0 no-repeat;
-          background-size: 100%;
-          left: 0;
-          @include mixin.pos-y-center;
-        }
-        .crnt-num {color: root.$color-green;}
-      }
-    }
-    &:disabled {
-      background: root.$color-gray;
-      cursor: auto;
-    }
-    &.more-btn {
-      background: root.$border-gray;
-
-      span {
-        position: relative;
-        padding-right: 13px;
-
-        &:before {
-          position: absolute;
-          content: '';
-          width: 12px;
-          height: 12px;
-          background-position-x: -72px;
-          right: 0;
-          @include mixin.pos-y-center;
-        }
-      }
-    }
-  }
-}
-
-@include mixin.desktop {
-  button {font-size: 18px;}
-  .button-box {
-    &.fix-type {
-      padding: 20px 0 40px;
-      position: inherit;
-      bottom: auto;
-      left: auto;
-      transform: none;
-      &.sub-fix {bottom: auto;}
-    }
-
-    .btn {
-      &.file-type {
-        .file-num {
-          font-size: 16px; padding-left: 30px;
-          &:before {width: 22px; height: 18px;}
-        }
-      }
-    }
-  }
-}
 /* ## button box end ## */
-
-/* ## check box start ## */
-.check-box, .radio-box {
-  .label {display: flex; align-items: center;}
-  .inp {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    background: url('img/icons/ico-check-circle.svg') 0 0 no-repeat;
-  }
-  .text {cursor: pointer;}
-  input[type="checkbox"], input[type="radio"] {
-    position: absolute;
-    width: 0;
-    height: 0;
-    opacity: 0;
-
-    &:checked {
-      &~.inp {background-position-x: -20px;}
-    }
-  }
-}
-
-@include mixin.desktop {
-  .check-box, .radio-box {font-size: 14px;}
-}
-
-/* ## check box end ## */
 
 /* ## 동적 줄바꿈 start ## */
 .mob-br {display: block;}
@@ -221,35 +68,3 @@ button {@include default-font; @include mixin.default-form;}
   .web-br {display: block;}
 }
 /* ## 동적 줄바꿈 end ## */
-
-/* ## 내용 없음 start ## */
-.no-contents {
-  padding: 10% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .desc {
-    position: relative;
-    padding-top: 120px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: root.$font-bold;
-    line-height: 1.5;
-
-    &:before {
-      position: absolute;
-      content: '';
-      width: 100px;
-      height: 100px;
-      top: 0;
-      @include mixin.pos-x-center;
-      background-size: auto 100px;
-      background-position-x: -200px;
-    }
-  }
-}
-@include mixin.desktop {
-  .no-contents {min-height: auto !important;}
-}
-/* ## 내용 없음 end ## */

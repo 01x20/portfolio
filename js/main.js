@@ -1,5 +1,6 @@
 setInterval(circleFn,3000);
 
+//slide
 const swiper = new Swiper('.box-slide', {
     loop: true,
     slidesPerView: 3,
@@ -13,26 +14,7 @@ const swiper = new Swiper('.box-slide', {
     observeParents: true,
 });
 
-
-/*
-//pin
-const horizontal = document.querySelector('.list-wrap'); 
-const sections = gsap.utils.toArray(".list-wrap .list");
-
-gsap.to(sections, {
-    xPercent: -100 * (sections.length -1),
-    ease: "none",
-    scrollTrigger: {
-        trigger: horizontal,
-        start: "top top",
-        end: () => "+=" + (horizontal.offsetWidth - innerWidth),
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-    }
-});*/
-
+//circle funtion
 let i=1;
 function circleFn () {
     const rotateTarget = $('.js-rotate');
@@ -65,22 +47,17 @@ ScrollTrigger.create({
     }
 });
 
-
-/*
-//pin type1
-const pinType1 = gsap.timeline();
-pinType1.to(".pin-wrap1 .box1", {xPercent: 3000, duration: 3}, "text")
-        .to(".pin-wrap1 .box2", {xPercent: -3000, duration: 3}, "text")
-        .to(".pin-wrap1 .box3", {xPercent: 3000, duration: 3}, "text")
+//footer
+const showNav = gsap.from(".footer", {
+    yPercent: 200,
+    paused: true,
+    duration: 0.2
+}).progress(1);
 
 ScrollTrigger.create({
-    animation: pinType1,
-    trigger: ".pin-wrap1",
     start: "top top",
-    scrub: true,
-    pin: true, 
-    anticipatePin: 1,
-    pinSpacing: false,
-    markers: true,
+    end: 99999,
+    onUpdate: (self) => {
+        self.direction === -1 ? showNav.play() : showNav.reverse();
+    }
 });
-*/

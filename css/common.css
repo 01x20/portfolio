@@ -13,7 +13,7 @@
   font-weight: root.$font-bold;
 }*/
 html, body {
-  color: #fff;
+  color: #000;
   letter-spacing: -0.5px;
   font-family: "GmarketSans", sans-serif;
   font-size: 13px;
@@ -22,7 +22,6 @@ html, body {
 
 body {
   -ms-overflow-style: none;
-  background: #050505;
 }
 
 ::-webkit-scrollbar {
@@ -30,13 +29,13 @@ body {
 }
 
 pre {
-  font-family: "Pretendard", sans-serif;
+  font-family: "GmarketSans", sans-serif;
   line-height: 1.6;
 }
 
 @media screen and (min-width: 1024px) {
   html, body {
-    color: #fff;
+    color: #000;
     letter-spacing: -0.5px;
     font-family: "GmarketSans", sans-serif;
     font-size: 13px;
@@ -44,78 +43,18 @@ pre {
 }
 /* ## font end ## */
 /* ## 텍스트 컬러 공통 start ## */
-.color-green {
-  color: #70ff91;
-}
-
-.color-gray {
-  color: #212121;
-}
-
 .color-white {
   color: #fff;
 }
 
-.color-text-gray {
-  color: #585a59;
+.color-black {
+  color: #000;
 }
 
 /* ## 텍스트 컬러 공통 end ## */
-/* ## input style 공통 start ## */
-input, select, textarea {
-  color: #fff;
-  letter-spacing: -0.5px;
-  font-family: "GmarketSans", sans-serif;
-  font-size: 13px;
-  width: 100%;
-  height: 48px;
-  line-height: 48px;
-  border-radius: 6px;
-  border: 1px solid #212121;
-  padding: 0 14px;
-}
-@media screen and (min-width: 1024px) {
-  input, select, textarea {
-    height: 56px;
-    line-height: 56px;
-  }
-}
-input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
-  color: #585a59;
-}
-input::placeholder, select::placeholder, textarea::placeholder {
-  color: #585a59;
-}
-
-textarea {
-  resize: none;
-  height: auto;
-  line-height: inherit;
-  padding: 10px 14px;
-}
-
-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #fff url("img/icons/ico-select-arrow.svg") no-repeat right 14px center;
-  background-size: 14px;
-}
-
-@media screen and (min-width: 1024px) {
-  input, select, textarea {
-    font-size: 14px;
-    padding: 0 20px;
-  }
-  select {
-    background-position: right 20px center;
-    background-size: 16px;
-  }
-}
-/* ## input style 공통 end ## */
 /* ## button box start ## */
 button {
-  color: #fff;
+  color: #000;
   letter-spacing: -0.5px;
   font-family: "GmarketSans", sans-serif;
   font-size: 13px;
@@ -131,131 +70,7 @@ button {
   }
 }
 
-.button-box.fix-type {
-  width: 100%;
-  padding: 20px 16px 40px;
-  background: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.button-box.fix-type.sub-fix {
-  bottom: 0;
-}
-.button-box.fix-type.sub-fix.not-app {
-  bottom: 50px;
-}
-.button-box .btn.common-type {
-  background: #70ff91;
-  color: #fff;
-  font-weight: 700;
-}
-.button-box .btn.border-type {
-  color: #fff;
-  border: 1px solid #D0D4DB;
-}
-.button-box .btn.file-type {
-  background: #EDF0F4;
-  border: 1px solid #D0D4DB;
-  color: #585a59;
-}
-.button-box .btn.file-type .file-num {
-  position: relative;
-  padding-left: 23px;
-  display: inline-block;
-  width: auto;
-}
-.button-box .btn.file-type .file-num:before {
-  position: absolute;
-  content: "";
-  width: 18px;
-  height: 15px;
-  background: url("img/icons/ico-camera.svg") 0 0 no-repeat;
-  background-size: 100%;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.button-box .btn.file-type .file-num .crnt-num {
-  color: #70ff91;
-}
-.button-box .btn:disabled {
-  background: #212121;
-  cursor: auto;
-}
-.button-box .btn.more-btn {
-  background: #EDF0F4;
-}
-.button-box .btn.more-btn span {
-  position: relative;
-  padding-right: 13px;
-}
-.button-box .btn.more-btn span:before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 12px;
-  background-position-x: -72px;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@media screen and (min-width: 1024px) {
-  button {
-    font-size: 18px;
-  }
-  .button-box.fix-type {
-    padding: 20px 0 40px;
-    position: inherit;
-    bottom: auto;
-    left: auto;
-    transform: none;
-  }
-  .button-box.fix-type.sub-fix {
-    bottom: auto;
-  }
-  .button-box .btn.file-type .file-num {
-    font-size: 16px;
-    padding-left: 30px;
-  }
-  .button-box .btn.file-type .file-num:before {
-    width: 22px;
-    height: 18px;
-  }
-}
 /* ## button box end ## */
-/* ## check box start ## */
-.check-box .label, .radio-box .label {
-  display: flex;
-  align-items: center;
-}
-.check-box .inp, .radio-box .inp {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  background: url("img/icons/ico-check-circle.svg") 0 0 no-repeat;
-}
-.check-box .text, .radio-box .text {
-  cursor: pointer;
-}
-.check-box input[type=checkbox], .check-box input[type=radio], .radio-box input[type=checkbox], .radio-box input[type=radio] {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-.check-box input[type=checkbox]:checked ~ .inp, .check-box input[type=radio]:checked ~ .inp, .radio-box input[type=checkbox]:checked ~ .inp, .radio-box input[type=radio]:checked ~ .inp {
-  background-position-x: -20px;
-}
-
-@media screen and (min-width: 1024px) {
-  .check-box, .radio-box {
-    font-size: 14px;
-  }
-}
-/* ## check box end ## */
 /* ## 동적 줄바꿈 start ## */
 .mob-br {
   display: block;
@@ -273,37 +88,4 @@ button {
     display: block;
   }
 }
-/* ## 동적 줄바꿈 end ## */
-/* ## 내용 없음 start ## */
-.no-contents {
-  padding: 10% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.no-contents .desc {
-  position: relative;
-  padding-top: 120px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.5;
-}
-.no-contents .desc:before {
-  position: absolute;
-  content: "";
-  width: 100px;
-  height: 100px;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-size: auto 100px;
-  background-position-x: -200px;
-}
-
-@media screen and (min-width: 1024px) {
-  .no-contents {
-    min-height: auto !important;
-  }
-}
-/* ## 내용 없음 end ## *//*# sourceMappingURL=common.css.map */
+/* ## 동적 줄바꿈 end ## *//*# sourceMappingURL=common.css.map */

@@ -1,11 +1,7 @@
 // 주요 색상
-$text-default : #fff;
-$text-gray : #585a59;
-$color-green : #70ff91; 
-$color-gray : #212121;
+$text-default : #000;
 $color-white : #fff;
-$color-black : #050505;
-$border-gray : #EDF0F4;
+$color-black : #000;
 
 // 모바일 기준 너비
 $breakpoint-m: 768px;
@@ -18,8 +14,6 @@ $font-bold: 700;
 
 // 텍스트 컬러 공통 - name, text color
 $textColors : (
-  "green" : $color-green,
-  "gray" : $color-gray,
   "white" : $color-white,
-  "text-gray" : $text-gray,
+  "black" : $color-black,
 );

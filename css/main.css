@@ -1,13 +1,3 @@
-@charset "UTF-8";
-html, body {
-  background: #fff;
-  color: #050505;
-}
-
-*, a {
-  color: #050505;
-}
-
 .main-contents {
   position: relative;
 }
@@ -66,9 +56,6 @@ html, body {
   min-height: 200px;
   border-radius: 1.8rem;
   box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
-  /* 다른 사이트에서 가져온 그라데이션
-  linear-gradient(284.05deg, #D3D5FF 1.1%, #F6EBFF 80.76%),radial-gradient(424.92% 165.79% at 1.6% 27.43%, #ACB4FF 0%, #FDEAFF 100%)
-  */
 }
 .main-contents .box-group .box-slide .box-inner.shadow-type1 {
   box-shadow: 0 0 6rem rgba(192, 238, 211, 0.5);
@@ -153,21 +140,6 @@ html, body {
   font-size: 1.2rem;
   line-height: 1.5;
   opacity: 0.6;
-}
-.main-contents .pin-wrap1 {
-  overflow: hidden;
-  position: relative;
-}
-.main-contents .pin-wrap1 .js-pin {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.main-contents .pin-wrap1 .js-pin > div {
-  font-size: 4rem;
 }
 .main-contents .pin-wrap {
   width: 100%;
@@ -268,9 +240,33 @@ html, body {
 
 .footer {
   position: fixed;
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px;
+  bottom: 1.5rem;
+  z-index: 100;
+  max-width: 16rem;
+  width: 100%;
+}
+.footer .quick-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 100rem;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+}
+.footer .quick-list > li {
+  width: 3.5rem;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+  border-radius: 100%;
+  background: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }/*# sourceMappingURL=main.css.map */

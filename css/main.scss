@@ -1,15 +1,6 @@
 @use 'root';
 @use 'mixin';
 
-//임시
-html, body {
-    background: root.$color-white;
-    color: root.$color-black;
-}
-*, a {
-    color: root.$color-black;
-}
-
 //main
 .main-contents {
     position: relative;
@@ -72,14 +63,10 @@ html, body {
                 background: root.$color-white;
                 min-height: 200px;
                 border-radius: 1.8rem;
-                box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5); //핑크
+                box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
 
-                &.shadow-type1 {box-shadow: 0 0 6rem rgba(192, 238, 211, .5);} //초록
-                &.shadow-type2 {box-shadow: 0 0 6rem rgba(182,200,239,0.2);} //파랑
-
-                /* 다른 사이트에서 가져온 그라데이션
-                linear-gradient(284.05deg, #D3D5FF 1.1%, #F6EBFF 80.76%),radial-gradient(424.92% 165.79% at 1.6% 27.43%, #ACB4FF 0%, #FDEAFF 100%)
-                */
+                &.shadow-type1 {box-shadow: 0 0 6rem rgba(192, 238, 211, .5);}
+                &.shadow-type2 {box-shadow: 0 0 6rem rgba(182,200,239,0.2);}
             }
         }
     }
@@ -106,7 +93,7 @@ html, body {
                 height: 100vh;
                 font-size: 100px;
                 text-align: center;
-                background: #fff;
+                background: root.$color-white;
                 z-index: 1;
             }
         }
@@ -165,22 +152,6 @@ html, body {
                 line-height: 1.5;
                 opacity: .6;
             }
-        }
-    }
-
-    .pin-wrap1 {
-        overflow: hidden;
-        position: relative;
-        
-        .js-pin {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            & > div {font-size: 4rem;}
         }
     }
 
@@ -300,9 +271,33 @@ html, body {
 //layout
 .footer {
     position: fixed;
-    backdrop-filter: blur(25px);
     @include mixin.pos-x-center;
-    bottom: 30px;
+    bottom: 1.5rem;
+    z-index: 100;
+    max-width: 16rem;
+    width: 100%;
+
+    .quick-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 100rem;
+        backdrop-filter: blur(7px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+        border: 1px solid rgba(255,255,255,.05);
+        background: rgba(255,255,255,.05);
+
+        & > li {
+            width: 3.5rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            text-align: center;
+            border-radius: 100%;
+            background: root.$color-white;
+            box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,.05);
+        }
+    }
 }
-
-
