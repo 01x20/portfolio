@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/ungveloper/web-fonts/GmarketSans/font-face.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/ungveloper/web-fonts/GmarketSans/font-family.css" />
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!--swiper lib-->
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <script src="swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <main class="main-contents">
+            <div class="inner-wrap">
+                <aside class="side-contents">
+
+                </aside>
+                <section class="contents">
+                    <div class="top-slogan">
+                        <p class="title">메인 비주얼에 들어가는<br>슬로건의<br>문구를 적습니다.</p>
+                        <p class="desc">아래에는 슬로건에 대한<br>짧은 설명을 적어요<br>한 줄만 더 적어보세요</p>
+                    </div>
+                    <div class="box-group">
+                        <p class="desc"><span>리스트</span> 설명을 적어주세요</p>
+                        <p class="title">어떤 리스트인지 <strong>소개</strong>해 주세요</p>
+                        <div class="slide-wrap">
+                            <div class="swiper box-slide">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="box-inner">
+                                            안녕하세요?1
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box-inner shadow-type1">
+                                            안녕하세요?2
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="box-inner shadow-type2">
+                                            안녕하세요?3
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-wrap">
+                        <div class="circle-wrap">
+                            <div class="inner-box js-rotate">
+                                <div class="box circle01">
+                                    <img class="reverse" src="img//project/ys/mo-main-elcanto.jpg" alt="">
+                                </div>
+                                <div class="box circle02">
+                                    <img class="reverse" src="img//project/ys/mo-main-hanbo.jpg" alt="">
+                                </div>
+                                <div class="box circle03">
+                                    <img class="reverse" src="img//project/ys/mo-main-phaze.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-wrap">
+                            <p class="title">나를 소개하는<br>멋있는 문구를<br>간단하게 적어봐요</p>
+                            <p class="desc">팀워크의 중요성을 깊이 이해하며,<br>발전을 위해 어쩌구를 해요</p>
+                        </div>
+                    </div>
+                    <!--<div class="pin-wrap1">
+                        <div class="js-pin">
+                            <div class="box1">Changeable</div>
+                            <div class="box2">web</div>
+                            <div class="box3">publisher</div>
+                        </div>
+                    </div>-->
+                    <div class="pin-wrap">
+                        <div class="boxs box1">Collaborative,<br>Driven,<br>Adaptable</div>
+                        <div class="boxs box2">
+                            <div class="text-wrap">
+                                <p>저를 잘 표현할 수 있는 단어는</p>
+                                <p><span class="ico-box">팀과 협업을 중시하는 <i class="ico"><img src="img/ico-talk.png" alt=""></i></span></p>
+                                <p><span class="ico-box">목표 지향적인 <i class="ico"><img src="img/ico-target.png" alt=""></i></span></p>
+                                <p><span class="ico-box">변화에 유연하게 적응할 수 있는 <i class="ico"><img src="img/ico-change.png" alt=""></i></span></p>
+                                <p><strong>Collaborative, Driven, Adaptable</strong> 입니다.</p>
+                                <br>
+                                <p><strong>팀워크</strong>를 중요하게 생각하며,<br>명확한 <strong>목표</strong>를 가지고 꾸준히 도전하며<br><strong>새로운 환경</strong>에서도 항상 최선을 다해<br><strong>발전</strong>해 나가는 사람입니다</p>
+                                <p>제 목표는 같이 일하고 싶은 동료입니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="about-wrap">
+                        <div class="text-wrap"></div>
+                        <div class="list-wrap">
+                            <div class="list">1</div>
+                            <div class="list">2</div>
+                            <div class="list">3</div>
+                            <div class="list">4</div>
+                        </div>
+                    </div>-->
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <!--<div class="wrapper">
+        <header class="header">
+            <h1><a href="main.html" class="logo">GE</a></h1>
+            <button type="button" class="gnb-btn"></button>
+        </header>
+        <main class="main">
+            <section class="main-visual">
+                <h2 class="title">Changeable<br>web publisher</h2>
+                <p class="desc">슬로건에 대한 짧은 설명이 들어갑니다.</p>
+            </section>
+            <section class="contents">
+               <h2 class="title">Title dummy</h2>
+               <p class="sub-title">소개하고 싶은 타이틀의 내용을 설명하는 글</p>
+               <ul class="list-wrap">
+                    <li>
+                        <h3 class="list-title"><span class="list-num"><em>0</em>1</span>제목1</h3>
+                        <p class="text">제목에 대한 내용1</p>
+                        <p class="text">제목에 대한 내용2</p>
+                        <p class="text">제목에 대한 내용3</p>
+                    </li>
+                    <li>
+                        <h3 class="list-title"><span class="list-num"><em>0</em>2</span>제목2</h3>
+                        <p class="text">제목에 대한 내용1</p>
+                        <p class="text">제목에 대한 내용2</p>
+                        <p class="text">제목에 대한 내용3</p>
+                    </li>
+                    <li class="bb-none">
+                        <h3 class="list-title"><span class="list-num"><em>0</em>3</span>제목3</h3>
+                        <p class="text">제목에 대한 내용1</p>
+                        <p class="text">제목에 대한 내용2</p>
+                        <p class="text">제목에 대한 내용3</p>
+                    </li>
+                    <li class="bb-none">
+                        <h3 class="list-title"><span class="list-num"><em>0</em>4</span>제목4</h3>
+                        <p class="text">제목에 대한 내용1</p>
+                        <p class="text">제목에 대한 내용2</p>
+                        <p class="text">제목에 대한 내용3</p>
+                    </li>
+               </ul>
+            </section>
+            <section class="contents">
+                <h2 class="title">Title dummy</h2>
+                <p class="sub-title">소개하고 싶은 타이틀의 내용을 설명하는 글</p>
+
+            </section>
+        </main>
+        <script>
+            // pin
+            let panels = gsap.utils.toArray(".contents");
+
+            panels.forEach((panel, i) => {
+                ScrollTrigger.create({
+                    trigger: panel,
+                    start: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                });
+            });
+
+            const showNav = gsap.from(".header", { 
+            yPercent: -200,
+            paused: true,
+            duration: 0.2
+        }).progress(1);
+
+        ScrollTrigger.create({
+            start: "top top",
+            end: 99999,
+            onUpdate: (self) => {
+                self.direction === -1 ? showNav.play() : showNav.reverse()
+            }
+        });
+        </script>-->
+        <!-- <script src="js/index.js"></script> -->
+    </div>
+</body>
+</html>
