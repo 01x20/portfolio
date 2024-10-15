@@ -59,6 +59,7 @@
             }
 
             .box-inner {
+                text-align: left;
                 padding: 1rem;
                 background: root.$color-white;
                 min-height: 200px;
@@ -67,6 +68,33 @@
 
                 &.shadow-type1 {box-shadow: 0 0 6rem rgba(192, 238, 211, .5);}
                 &.shadow-type2 {box-shadow: 0 0 6rem rgba(182,200,239,0.2);}
+
+                .ico {
+                    display: inline-block;
+                    width: 6rem;
+                    margin-top: -0.5rem;
+
+                    img {width: 100%;}
+                }
+                .label-line {
+                    display: inline-block;
+                    padding: 0 0.5rem;
+                    font-size: 0.9rem;
+                    border-radius: 100rem;
+                    background: #c6ffd3;
+                    height: 1rem;
+                    line-height: 1rem;
+                }
+                .title {
+                    font-size: 1rem;
+                    margin: 1rem 0 0;
+                    font-weight: root.$font-bold;
+                }
+                .desc {
+                    margin-top: 0.5rem;
+                    font-size: 0.9rem;
+                    line-height: 1.4;
+                }
             }
         }
     }

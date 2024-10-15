@@ -51,6 +51,7 @@
   z-index: 2;
 }
 .main-contents .box-group .box-slide .box-inner {
+  text-align: left;
   padding: 1rem;
   background: #fff;
   min-height: 200px;
@@ -62,6 +63,33 @@
 }
 .main-contents .box-group .box-slide .box-inner.shadow-type2 {
   box-shadow: 0 0 6rem rgba(182, 200, 239, 0.2);
+}
+.main-contents .box-group .box-slide .box-inner .ico {
+  display: inline-block;
+  width: 6rem;
+  margin-top: -0.5rem;
+}
+.main-contents .box-group .box-slide .box-inner .ico img {
+  width: 100%;
+}
+.main-contents .box-group .box-slide .box-inner .label-line {
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 100rem;
+  background: #c6ffd3;
+  height: 1rem;
+  line-height: 1rem;
+}
+.main-contents .box-group .box-slide .box-inner .title {
+  font-size: 1rem;
+  margin: 1rem 0 0;
+  font-weight: 700;
+}
+.main-contents .box-group .box-slide .box-inner .desc {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 .main-contents .about-wrap {
   position: relative;

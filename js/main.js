@@ -1,9 +1,10 @@
 setInterval(circleFn,3000);
 
 //slide
-const swiper = new Swiper('.box-slide', {
+const boxSlide = new Swiper('.box-slide', {
     loop: true,
     slidesPerView: 3,
+    slidesPerGroup: 1,
     centeredSlides: true,
     /*autoplay: {
         delay: 4000,
@@ -12,6 +13,11 @@ const swiper = new Swiper('.box-slide', {
     loopAdditionalSlides : 1,
     observer: true,
     observeParents: true,
+    breakpoints : {
+        580 : {
+            
+        },
+    }
 });
 
 //circle funtion
