@@ -35,7 +35,7 @@ function circleFn () {
 
 //pin
 const pinFn = gsap.timeline();
-pinFn.from('.pin-wrap .box2', {autoAlpha: 0, duration: 1,}, "+=1")
+pinFn.from('.pin-wrap .box2', {autoAlpha: 0, duration: 0.3,}, "+=0.3")
 
 ScrollTrigger.create({
     animation: pinFn,
@@ -46,9 +46,9 @@ ScrollTrigger.create({
     anticipatePin: 1,
     onUpdate: (self) => {
         if (self.progress > 0.5) {
-          document.querySelector('.pin-wrap .box2').classList.add('active');  // 50% 이상 스크롤되면 클래스 추가
+          document.querySelector('.pin-wrap .box2').classList.add('active');
         } else {
-          document.querySelector('.pin-wrap .box2').classList.remove('active');  // 50% 미만일 때 클래스 제거
+          document.querySelector('.pin-wrap .box2').classList.remove('active');
         }
     }
 });
