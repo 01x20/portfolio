@@ -4,8 +4,6 @@ setInterval(circleFn,3000);
 const careerSlide = new Swiper('.career-slide', {
     effect: "cards",
     grabCursor: true,
-    loop: true,
-    centeredSlides: true,
     loopAdditionalSlides : 1,
     observer: true,
     observeParents: true,
@@ -16,9 +14,9 @@ const boxSlide = new Swiper('.box-slide', {
     slidesPerView: 3,
     slidesPerGroup: 1,
     centeredSlides: true,
-    /*autoplay: {
-        delay: 4000,
-    },*/
+    autoplay: {
+        delay: 3000,
+    },
     speed: 1000,
     loopAdditionalSlides : 1,
     observer: true,

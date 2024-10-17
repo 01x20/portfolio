@@ -5,8 +5,22 @@
 .main-contents {
     position: relative;
 
-    .side-contents {
-        display: none;
+
+    //공통 타이틀
+    .title-box {
+        text-align: center;
+
+        .desc {
+            font-size: 1rem;
+            line-height: 1.5;
+            opacity: .6;
+            text-transform: uppercase;
+            font-weight: root.$font-bold;
+        }
+        .title {
+            font-size: 1.8rem;
+            margin: 0.8rem 0 0;
+        }
     }
 
     .pin-wrap {
@@ -26,6 +40,10 @@
             height: 100%;
             padding: 2rem 1.5rem;
             overflow: hidden;
+            font-size: 2.3rem;
+            font-weight: root.$font-bold;
+            text-align: center;
+            line-height: 2;
 
             &::before {
                 position: absolute;
@@ -84,39 +102,6 @@
                     transform: rotate(360deg)
                 }
             }
-
-            &.box1 {
-                font-size: 2.3rem;
-                font-weight: root.$font-bold;
-                text-align: center;
-                line-height: 2;
-            }
-            &.box2 {
-                font-size: 1.15rem;
-                text-align: center;
-                line-height: 2.5;
-
-                .ico-box {
-                    display: inline-block;
-                    height: 2.5rem;
-                    line-height: 2.3rem;
-                    padding: 0 1.2rem;
-                    border-radius: 100rem;
-                    background: root.$color-white;
-                    border: 1px solid rgba(247, 247, 247, 1);
-                    box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.09) inset;
-                    .ico {
-                        display: inline-block;
-                        width: 1.4rem;
-                        height: 1.4rem;
-                        vertical-align: -0.3rem;
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
         }
     }
 
@@ -124,8 +109,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 8rem 0 0;
         overflow: hidden;
+
+        .title-box {
+            padding: 4rem 1.5rem 8rem;
+        }
 
         .circle-wrap {
             width: 18rem;
@@ -163,7 +151,8 @@
                     display: flex;
                     justify-content: center;
                     align-items: flex-end;
-                    font-size: 0.95rem;
+                    font-size: 1rem;
+                    font-weight: root.$font-bold;
                     width: 10rem;
                     height: 10rem;
                     max-width: 17rem;
@@ -172,7 +161,7 @@
                     background: root.$color-white url('../img/ico-hifive.png') 50% 30% no-repeat;
                     background-size: 5.5rem;
                     position: relative;
-                    padding-bottom: 20%;
+                    padding-bottom: 18%;
                     box-shadow: 0 0 2rem rgba(182,200,239,0.7);
                     border: 2px solid rgb(182,200,239);
                 }
@@ -183,7 +172,7 @@
 
                     .reverse {
                         background-image: url('../img/ico-clock.png');
-                        background-position-x: 40%;
+                        background-position-x: 45%;
                         box-shadow: 0 0 2rem rgba(241, 205, 253, 0.7);
                         border: 2px solid rgb(241, 205, 253);
                     }
@@ -201,53 +190,40 @@
             }
         }
 
-        .text-wrap {
+        .points-text {
+            padding: 6rem 1.5rem 2rem;
+            font-size: 1.2rem;
+            line-height: 1.7;
             text-align: center;
-            padding:5rem 1.5rem 4rem;
+            word-break: keep-all;
 
             .desc {
-                font-size: 1rem;
-                line-height: 1.5;
-                opacity: .6;
-            }
-            .title {
-                font-size: 1.5rem;
-                margin: 0.8rem 0 0;
-            }
-        }
+                margin-top: 0.8rem;
 
-        .points-list {
-            padding-top: 2rem;
-            text-align: left;
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            gap: 1.4rem;
+                .line {
+                    position:relative;
+                    font-weight: root.$font-bold;
+                    display: inline-block;
 
-            .pin-li {
-                background: root.$color-white;
-                font-size: 1.15rem;
-                padding: 1.2rem;
-                background: root.$color-white;
-                border-radius: 1.2rem;
-                box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: calc(100% + 2px);
+                        height: 0.6rem;
+                        @include mixin.pos-x-center;
+                        bottom: 4px;
+                        opacity: 0.6;
+                        z-index: -1;
+                        background: linear-gradient(89deg, #C0EED3 0%, #B6C8EF 32.6%, #fce8cb 65.98%, #f0b1de 100%);
+                    }
+                }
             }
         }
     }
 
     .box-group {
-        padding: 3rem 0 4rem;
+        padding: 3rem 0 2rem;
         text-align: center;
-
-        .desc {
-            font-size: 1rem;
-            opacity: 0.6;
-        }
-
-        .title {
-            font-size: 1.5rem;
-            margin: 0.8rem 0 0;
-        }
         
         .slide-wrap {
             overflow: hidden;
@@ -261,12 +237,12 @@
             overflow: visible;
             display: flex;
             justify-content: center;
-            width: 42.5rem;
+            width: 45rem;
 
             .swiper-slide {
                 overflow: visible;
                 padding: 0 0.8rem;
-                width: 20rem;
+                width: 22rem;
 
                 &.swiper-slide-active {z-index: 2;}
             }
@@ -275,12 +251,21 @@
                 text-align: left;
                 padding: 1rem;
                 background: root.$color-white;
-                min-height: 200px;
+                border: 2px solid rgba(63, 63, 63, 0.01);
+                min-height: 230px;
                 border-radius: 1.8rem;
                 box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
 
-                &.shadow-type1 {box-shadow: 0 0 6rem rgba(192, 238, 211, .5);}
-                &.shadow-type2 {box-shadow: 0 0 6rem rgba(182,200,239,0.2);}
+                &.shadow-type1 {
+                    box-shadow: 0 0 6rem rgba(192, 238, 211, .5);
+                    
+                    .label-line {background: rgb(192, 238, 211);}
+                }
+                &.shadow-type2 {
+                    box-shadow: 0 0 6rem rgba(182,200,239,0.2);
+
+                    .label-line {background: rgb(182,200,239);}
+                }
 
                 .ico {
                     display: inline-block;
@@ -292,21 +277,19 @@
                 .label-line {
                     display: inline-block;
                     padding: 0 0.5rem;
-                    font-size: 0.9rem;
+                    font-size: 0.95rem;
                     border-radius: 100rem;
-                    background: #c6ffd3;
-                    height: 1rem;
-                    line-height: 1rem;
-                }
-                .title {
-                    font-size: 1rem;
-                    margin: 1rem 0 0;
                     font-weight: root.$font-bold;
+                    background: rgb(241, 205, 253);
+                    height: 1.2rem;
+                    line-height: 1.25rem;
+                    margin-top: 0.5rem;
                 }
                 .desc {
-                    margin-top: 0.5rem;
-                    font-size: 0.9rem;
+                    margin-top: 1rem;
+                    font-size: 1rem;
                     line-height: 1.4;
+                    letter-spacing: -1px;
                 }
             }
         }
@@ -316,11 +299,13 @@
 
     .career-wrap {
         overflow: hidden;
+        padding: 4rem 1.5rem 2rem;
     }
 
     .career-slide {
         width: 20rem;
-        height:25rem;
+        height: 28rem;
+        padding: 2rem 1.5rem;
 
         .swiper-slide {
             display: flex;
@@ -378,27 +363,68 @@
 //tablet
 @include mixin.tablet {
     .main-contents {
-        .top-slogan {
-            padding: 5rem 2.5rem;
-    
+
+        .title-box {
+            .desc {
+                font-size: 1.3rem;
+            }
             .title {
                 font-size: 2.4rem;
-                margin-bottom: 1.5rem;
-                letter-spacing: -0.25rem;
+                margin: 0.6rem 0 0;
             }
         }
+
+        .pin-wrap {
+            .boxs {
+                font-size: 2.8rem;
+            }
+        }
+
+        .intro-wrap {
+            padding: 2.8rem 0 6rem;
+
+            .title-box {
+                padding-bottom: 11rem;
+            }
     
+            .circle-wrap {
+                width: 24rem;
+                height: 24rem;
+
+                &::before {
+                    font-size: 1.5rem;
+                }
+            }
+    
+            .inner-box {
+                .box {
+                    .reverse {
+                        width: 13.5rem;
+                        height: 13.5rem;
+                        max-width: 20rem;
+                        background-size: 7.5rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            .points-text {
+                max-width: 60rem;
+                font-size: 1.3rem;
+                padding: 7.5rem 1.5rem 2rem;
+
+                .desc {
+                    margin-top: 1.2rem;
+                }
+            }
+    
+            .text-wrap {
+                padding: 5rem 1.5rem 4rem;
+            }
+        }
+
         .box-group {
             padding: 2.5rem 0 4rem;
-    
-            .desc {
-                font-size: 1.4rem;
-            }
-    
-            .title {
-                font-size: 1.95rem;
-                margin: 1rem 0 0;
-            }
             
             .slide-wrap {
                 padding: 7.5rem 0;
@@ -416,21 +442,27 @@
                 .box-inner {
                     text-align: left;
                     padding: 1.5rem;
-                    min-height: 250px;
                     border-radius: 1.8rem;
-                    max-width: 15.5rem;
+                    max-width: 18.5rem;
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
                     align-items: flex-start;
-                    box-shadow: 0 0 2.5rem rgba(241, 205, 253, 0.5);
+                    box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
+
+                    &.shadow-type1 {
+                        box-shadow: 0 0 6rem rgba(192, 238, 211, .5);
+                        
+                        .label-line {background: rgb(192, 238, 211);}
+                    }
+                    &.shadow-type2 {
+                        box-shadow: 0 0 6rem rgba(182,200,239,0.4);
     
-                    &.shadow-type1 {box-shadow: 0 0 2.5rem rgba(192, 238, 211, .5);}
-                    &.shadow-type2 {box-shadow: 0 0 2.5rem rgba(182,200,239,0.5);}
+                        .label-line {background: rgb(182,200,239);}
+                    }
     
                     .ico {
                         display: inline-block;
-                        width: 7rem;
+                        width: 7.5rem;
                         margin-top: -1rem;
     
                         img {width: 100%;}
@@ -438,70 +470,18 @@
                     .label-line {
                         display: inline-block;
                         padding: 0 1rem;
-                        font-size: 1.1rem;
-                        border-radius: 100rem;
-                        background: #c6ffd3;
-                        height: 1.3rem;
-                        line-height: 1.4rem;
-                    }
-                    .title {
+                        margin-top: 1rem;
                         font-size: 1.3rem;
-                        margin: 1.3rem 0 0;
-                        font-weight: root.$font-bold;
+                        border-radius: 100rem;
+                        background: rgb(241, 205, 253);
+                        height: 1.5rem;
+                        line-height: 1.5rem;
                     }
                     .desc {
                         margin-top: 1rem;
-                        font-size: 1.1rem;
+                        font-size: 1.3rem;
                         line-height: 1.5;
                     }
-                }
-            }
-        }
-    
-        .intro-wrap {
-            padding: 2.8rem 0 6rem;
-    
-            .circle-wrap {
-                width: 18rem;
-                height: 18rem;
-            }
-    
-            .inner-box {
-                .box {
-                    .reverse {
-                        width: 6.4rem;
-                        height: 6.4rem;
-                        max-width: 14rem;
-                    }
-                }
-            }
-    
-            .text-wrap {
-                padding:5rem 1.5rem 4rem;
-    
-                .title {
-                    font-size: 2.4rem;
-                    line-height: 1.2;
-                    margin-bottom: 1.3rem;
-                }
-    
-                .desc {
-                    font-size: 1.5rem;
-                }
-            }
-        }
-    
-        .pin-wrap {
-            .boxs {
-                padding: 3rem 2.5rem;
-    
-                &.box1 {
-                    font-size: 2.8rem;
-                }
-                &.box2 {
-                    font-size: 1.3rem;
-                    text-align: center;
-                    line-height: 2.3;
                 }
             }
         }
@@ -531,6 +511,7 @@
 @include mixin.desktop {
     .main-contents {
         background: #f2f2f2;
+        
         .inner-wrap {
             display: flex;
             gap: 15px;
@@ -539,24 +520,18 @@
             overflow: hidden;
             padding: 15px;
 
-            .side-contents {
-                display: block;
-                width: 70px;
-                border-radius: 100px;
-                background: root.$color-white;
-            }
-
-            .contents-inner {
-                max-width: 780px;
-                margin: 0 auto;
-            }
-
             .contents {
                 width: calc(100% - 85px);
                 height: 100%;
                 background: root.$color-white;
                 border-radius: 40px;
                 overflow-y: scroll;
+            }
+        }
+        
+        .pin-wrap {
+            .boxs {
+                height: 100vh;
             }
         }
     }
@@ -580,7 +555,8 @@
             & > li {
                 width: 55px;
                 height: 55px;
-                border: 1px solid rgba(0, 0, 0, 0.05);
+                border: none;
+                box-shadow: none;
             }
         }
     }
