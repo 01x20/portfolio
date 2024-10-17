@@ -1,21 +1,19 @@
 @charset "UTF-8";
 /* ## font start ## */
-/*@font-face {
-  font-family: 'Pretendard';
-  src: url('../font/Pretendard-Regular.woff') format('woff'),
-  url('../font/Pretendard-Regular.woff2') format('woff2');
-  font-weight: root.$font-normal;
+@font-face {
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Regular.woff") format("woff"), url("../font/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
 }
 @font-face {
-  font-family: 'Pretendard';
-  src: url('../font/Pretendard-Bold.woff') format('woff'),
-  url('../font/Pretendard-Bold.woff2') format('woff2');
-  font-weight: root.$font-bold;
-}*/
+  font-family: "Pretendard";
+  src: url("../font/Pretendard-Bold.woff") format("woff"), url("../font/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
 html, body {
   color: #000;
   letter-spacing: -0.5px;
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 13px;
   word-break: break-all;
 }
@@ -29,7 +27,7 @@ body {
 }
 
 pre {
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   line-height: 1.6;
 }
 
@@ -37,7 +35,7 @@ pre {
   html, body {
     color: #000;
     letter-spacing: -0.5px;
-    font-family: "GmarketSans", sans-serif;
+    font-family: "Pretendard", sans-serif;
     font-size: 13px;
   }
 }
@@ -56,7 +54,7 @@ pre {
 button {
   color: #000;
   letter-spacing: -0.5px;
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 13px;
   width: 100%;
   height: 48px;

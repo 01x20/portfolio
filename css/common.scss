@@ -2,7 +2,7 @@
 @use 'mixin';
 
 /* ## font start ## */
-/*@font-face {
+@font-face {
   font-family: 'Pretendard';
   src: url('../font/Pretendard-Regular.woff') format('woff'),
   url('../font/Pretendard-Regular.woff2') format('woff2');
@@ -13,13 +13,13 @@
   src: url('../font/Pretendard-Bold.woff') format('woff'),
   url('../font/Pretendard-Bold.woff2') format('woff2');
   font-weight: root.$font-bold;
-}*/
+}
 
 
 @mixin default-font {
   color: root.$text-default;
   letter-spacing: -0.5px;
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   font-size: 13px;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 pre {
-  font-family: "GmarketSans", sans-serif;
+  font-family: "Pretendard", sans-serif;
   line-height: 1.6;
 }
 
