@@ -4,19 +4,107 @@
 .main-contents .side-contents {
   display: none;
 }
-.main-contents .top-slogan {
-  padding: 10rem 1.5rem;
-  line-height: 1.5;
-  text-align: center;
+.main-contents .pin-wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-.main-contents .top-slogan .title {
-  font-size: 1.9rem;
+.main-contents .pin-wrap .boxs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+}
+.main-contents .pin-wrap .boxs::before {
+  position: absolute;
+  content: "";
+  left: -250%;
+  top: -250%;
+  width: 800%;
+  height: 800%;
+  z-index: -1;
+  background: linear-gradient(38deg, #b8cfff 20%, #eed9ff 33%, #c6ffd3 90%);
+  animation: pinbgani 3s linear infinite;
+}
+@keyframes pinbgani {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(36deg);
+  }
+  20% {
+    transform: rotate(72deg);
+  }
+  30% {
+    transform: rotate(108deg);
+  }
+  40% {
+    transform: rotate(144deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  60% {
+    transform: rotate(216deg);
+  }
+  70% {
+    transform: rotate(252deg);
+  }
+  80% {
+    transform: rotate(288deg);
+  }
+  90% {
+    transform: rotate(324deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.main-contents .pin-wrap .boxs.box1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2;
+}
+.main-contents .pin-wrap .boxs.box2 {
+  font-size: 1.15rem;
+  text-align: center;
+  line-height: 2.5;
+}
+.main-contents .pin-wrap .boxs.box2 .ico-box {
+  display: inline-block;
+  height: 2.5rem;
+  line-height: 2.3rem;
+  padding: 0 1.2rem;
+  border-radius: 100rem;
+  background: #fff;
+  border: 1px solid rgb(247, 247, 247);
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.09) inset;
+}
+.main-contents .pin-wrap .boxs.box2 .ico-box .ico {
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: -0.3rem;
+}
+.main-contents .pin-wrap .boxs.box2 .ico-box .ico img {
+  width: 100%;
 }
 .main-contents .intro-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 0 0;
+  padding: 8rem 0 0;
   overflow: hidden;
 }
 .main-contents .intro-wrap .circle-wrap {
@@ -24,7 +112,7 @@
   height: 18rem;
   border-radius: 100%;
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
 .main-contents .intro-wrap .circle-wrap::before {
@@ -122,9 +210,7 @@
 }
 .main-contents .box-group .desc {
   font-size: 1rem;
-}
-.main-contents .box-group .desc > span {
-  color: #999;
+  opacity: 0.6;
 }
 .main-contents .box-group .title {
   font-size: 1.5rem;
@@ -195,101 +281,8 @@
 .main-contents .box-group .box-list {
   display: none;
 }
-.main-contents .pin-wrap {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-.main-contents .pin-wrap .boxs {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  padding: 2rem 1.5rem;
+.main-contents .career-wrap {
   overflow: hidden;
-}
-.main-contents .pin-wrap .boxs::before {
-  position: absolute;
-  content: "";
-  left: -250%;
-  top: -250%;
-  width: 800%;
-  height: 800%;
-  z-index: -1;
-  background: linear-gradient(38deg, #b8cfff 20%, #eed9ff 33%, #c6ffd3 90%);
-  animation: pinbgani 3s linear infinite;
-}
-@keyframes pinbgani {
-  0% {
-    transform: rotate(0);
-  }
-  10% {
-    transform: rotate(36deg);
-  }
-  20% {
-    transform: rotate(72deg);
-  }
-  30% {
-    transform: rotate(108deg);
-  }
-  40% {
-    transform: rotate(144deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  60% {
-    transform: rotate(216deg);
-  }
-  70% {
-    transform: rotate(252deg);
-  }
-  80% {
-    transform: rotate(288deg);
-  }
-  90% {
-    transform: rotate(324deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.main-contents .pin-wrap .boxs.box1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  text-align: center;
-  line-height: 2;
-}
-.main-contents .pin-wrap .boxs.box2 {
-  font-size: 1.15rem;
-  text-align: center;
-  line-height: 2.5;
-}
-.main-contents .pin-wrap .boxs.box2 .ico-box {
-  display: inline-block;
-  height: 2.5rem;
-  line-height: 2.3rem;
-  padding: 0 1.2rem;
-  border-radius: 100rem;
-  background: #fff;
-  border: 1px solid rgb(247, 247, 247);
-  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.09) inset;
-}
-.main-contents .pin-wrap .boxs.box2 .ico-box .ico {
-  display: inline-block;
-  width: 1.4rem;
-  height: 1.4rem;
-  vertical-align: -0.3rem;
-}
-.main-contents .pin-wrap .boxs.box2 .ico-box .ico img {
-  width: 100%;
 }
 .main-contents .career-slide {
   width: 20rem;

@@ -58,22 +58,6 @@ ScrollTrigger.create({
     }
 });
 
-//pin
-/*const listPinFn = gsap.timeline();
-listPinFn.from('.points-list .li01', {autoAlpha: 0, duration: 0.3, y: 50})
-         .from('.points-list .li02', {autoAlpha: 0, duration: 0.3, y: 50}, "+=0.3")
-         .from('.points-list .li03', {autoAlpha: 0, duration: 0.3, y: 50}, "+=0.3")
-
-ScrollTrigger.create({
-    animation: listPinFn,
-    trigger: ".points-list",
-    start: "top top",
-    scrub: true,
-    pin: true,
-    pinSpacing: false,
-    anticipatePin: 1,
-});*/
-
 //footer
 const showNav = gsap.from(".footer", {
     yPercent: 200,
