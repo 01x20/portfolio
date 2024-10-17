@@ -10,15 +10,127 @@
     }
 
     .top-slogan {
-        padding: 5rem 1.5rem;
+        padding: 10rem 1.5rem;
         line-height: 1.5;
-
+        text-align: center;
+        
         .title {
             font-size: 1.9rem;
-            margin-bottom: 2rem;
         }
-        .desc {
-            font-size: 1.2rem;
+    }
+
+    .intro-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 0 0;
+        overflow: hidden;
+
+        .circle-wrap {
+            width: 18rem;
+            height: 18rem;
+            border-radius: 100%;
+            background: root.$color-white;
+            border: 1px solid rgba(0,0,0,0.2);
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: 'strength';
+                text-transform: uppercase;
+                font-weight: root.$font-bold;
+                font-size: 1rem;
+                @include mixin.pos-center;
+            }
+        }
+
+        .inner-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            transition: transform 1.5s cubic-bezier(.75,0,.25,1);
+            background: radial-gradient(circle, rgba(184, 207, 255, 0.2) 5%, rgba(238, 217, 255, 0.3) 40%, rgba(198, 255, 211, 0.1));
+            
+            .box {
+                position:absolute;
+                top: 0%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+
+                .reverse {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    font-size: 0.95rem;
+                    width: 10rem;
+                    height: 10rem;
+                    max-width: 17rem;
+                    transition: transform 1.5s cubic-bezier(.75,0,.25,1);
+                    border-radius: 100%;
+                    background: root.$color-white url('../img/ico-hifive.png') 50% 30% no-repeat;
+                    background-size: 5.5rem;
+                    position: relative;
+                    padding-bottom: 20%;
+                    box-shadow: 0 0 2rem rgba(182,200,239,0.7);
+                    border: 2px solid rgb(182,200,239);
+                }
+
+                &.circle02 {
+                    top: 75%; 
+                    left: 6.66%;
+
+                    .reverse {
+                        background-image: url('../img/ico-clock.png');
+                        background-position-x: 40%;
+                        box-shadow: 0 0 2rem rgba(241, 205, 253, 0.7);
+                        border: 2px solid rgb(241, 205, 253);
+                    }
+                }
+                &.circle03 {
+                    top: 75%; 
+                    left: 93%;
+
+                    .reverse {
+                        background-image: url('../img/ico-solve.png');
+                        box-shadow: 0 0 2rem rgba(192, 238, 211, .6);
+                        border: 2px solid rgb(192, 238, 211);
+                    }
+                }
+            }
+        }
+
+        .text-wrap {
+            text-align: center;
+            padding:5rem 1.5rem 4rem;
+
+            .desc {
+                font-size: 1rem;
+                line-height: 1.5;
+                opacity: .6;
+            }
+            .title {
+                font-size: 1.5rem;
+                margin: 0.8rem 0 0;
+            }
+        }
+
+        .points-list {
+            padding-top: 2rem;
+            text-align: left;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+
+            .pin-li {
+                background: root.$color-white;
+                font-size: 1.15rem;
+                padding: 1.2rem;
+                background: root.$color-white;
+                border-radius: 1.2rem;
+                box-shadow: 0 0 2rem rgba(0,0,0,0.1);
+            }
         }
     }
 
@@ -99,63 +211,6 @@
         }
 
         .box-list { display: none; }
-    }
-
-    .intro-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 4rem 0 6rem;
-        overflow: hidden;
-
-        .circle-wrap {
-            width: 15rem;
-            height: 15rem;
-            border-radius: 100%;
-            background: #eee;
-            position: relative;
-        }
-
-        .inner-box {
-            width: 100%;
-            height: 100%;
-            transition: transform 1.5s cubic-bezier(.75,0,.25,1);
-            
-            .box {
-                position:absolute;
-                top: 0%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: 100%;
-                overflow: hidden;
-
-                .reverse {
-                    width: 6rem;
-                    height: 6rem;
-                    max-width: 17rem;
-                    transition: transform 1.5s cubic-bezier(.75,0,.25,1);
-                }
-                &.circle02 {top: 75%; left: 6.66%;}
-                &.circle03 {top: 75%; left: 93%;}
-            }
-        }
-
-        .text-wrap {
-            text-align: center;
-            padding:5rem 1.5rem 4rem;
-
-            .title {
-                font-size: 2rem;
-                line-height: 1.4;
-                margin-bottom: 1.2rem;
-            }
-
-            .desc {
-                font-size: 1.2rem;
-                line-height: 1.5;
-                opacity: .6;
-            }
-        }
     }
 
     .pin-wrap {
@@ -269,6 +324,22 @@
         }
     }
 
+    .career-slide {
+        width: 20rem;
+        height:25rem;
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 18px;
+            font-size: 22px;
+            font-weight: bold;
+            background: root.$color-white;
+            box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+        }
+    }
+
 }
 
 //layout
@@ -320,9 +391,6 @@
                 font-size: 2.4rem;
                 margin-bottom: 1.5rem;
                 letter-spacing: -0.25rem;
-            }
-            .desc {
-                font-size: 1.35rem;
             }
         }
     

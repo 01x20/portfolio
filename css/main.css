@@ -5,15 +5,116 @@
   display: none;
 }
 .main-contents .top-slogan {
-  padding: 5rem 1.5rem;
+  padding: 10rem 1.5rem;
   line-height: 1.5;
+  text-align: center;
 }
 .main-contents .top-slogan .title {
   font-size: 1.9rem;
-  margin-bottom: 2rem;
 }
-.main-contents .top-slogan .desc {
-  font-size: 1.2rem;
+.main-contents .intro-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 0;
+  overflow: hidden;
+}
+.main-contents .intro-wrap .circle-wrap {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.main-contents .intro-wrap .circle-wrap::before {
+  position: absolute;
+  content: "strength";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-contents .intro-wrap .inner-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transition: transform 1.5s cubic-bezier(0.75, 0, 0.25, 1);
+  background: radial-gradient(circle, rgba(184, 207, 255, 0.2) 5%, rgba(238, 217, 255, 0.3) 40%, rgba(198, 255, 211, 0.1));
+}
+.main-contents .intro-wrap .inner-box .box {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+}
+.main-contents .intro-wrap .inner-box .box .reverse {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 0.95rem;
+  width: 10rem;
+  height: 10rem;
+  max-width: 17rem;
+  transition: transform 1.5s cubic-bezier(0.75, 0, 0.25, 1);
+  border-radius: 100%;
+  background: #fff url("../img/ico-hifive.png") 50% 30% no-repeat;
+  background-size: 5.5rem;
+  position: relative;
+  padding-bottom: 20%;
+  box-shadow: 0 0 2rem rgba(182, 200, 239, 0.7);
+  border: 2px solid rgb(182, 200, 239);
+}
+.main-contents .intro-wrap .inner-box .box.circle02 {
+  top: 75%;
+  left: 6.66%;
+}
+.main-contents .intro-wrap .inner-box .box.circle02 .reverse {
+  background-image: url("../img/ico-clock.png");
+  background-position-x: 40%;
+  box-shadow: 0 0 2rem rgba(241, 205, 253, 0.7);
+  border: 2px solid rgb(241, 205, 253);
+}
+.main-contents .intro-wrap .inner-box .box.circle03 {
+  top: 75%;
+  left: 93%;
+}
+.main-contents .intro-wrap .inner-box .box.circle03 .reverse {
+  background-image: url("../img/ico-solve.png");
+  box-shadow: 0 0 2rem rgba(192, 238, 211, 0.6);
+  border: 2px solid rgb(192, 238, 211);
+}
+.main-contents .intro-wrap .text-wrap {
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+}
+.main-contents .intro-wrap .text-wrap .desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.6;
+}
+.main-contents .intro-wrap .text-wrap .title {
+  font-size: 1.5rem;
+  margin: 0.8rem 0 0;
+}
+.main-contents .intro-wrap .points-list {
+  padding-top: 2rem;
+  text-align: left;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+.main-contents .intro-wrap .points-list .pin-li {
+  background: #fff;
+  font-size: 1.15rem;
+  padding: 1.2rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 }
 .main-contents .box-group {
   padding: 3rem 0 4rem;
@@ -93,61 +194,6 @@
 }
 .main-contents .box-group .box-list {
   display: none;
-}
-.main-contents .intro-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 4rem 0 6rem;
-  overflow: hidden;
-}
-.main-contents .intro-wrap .circle-wrap {
-  width: 15rem;
-  height: 15rem;
-  border-radius: 100%;
-  background: #eee;
-  position: relative;
-}
-.main-contents .intro-wrap .inner-box {
-  width: 100%;
-  height: 100%;
-  transition: transform 1.5s cubic-bezier(0.75, 0, 0.25, 1);
-}
-.main-contents .intro-wrap .inner-box .box {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 100%;
-  overflow: hidden;
-}
-.main-contents .intro-wrap .inner-box .box .reverse {
-  width: 6rem;
-  height: 6rem;
-  max-width: 17rem;
-  transition: transform 1.5s cubic-bezier(0.75, 0, 0.25, 1);
-}
-.main-contents .intro-wrap .inner-box .box.circle02 {
-  top: 75%;
-  left: 6.66%;
-}
-.main-contents .intro-wrap .inner-box .box.circle03 {
-  top: 75%;
-  left: 93%;
-}
-.main-contents .intro-wrap .text-wrap {
-  text-align: center;
-  padding: 5rem 1.5rem 4rem;
-}
-.main-contents .intro-wrap .text-wrap .title {
-  font-size: 2rem;
-  line-height: 1.4;
-  margin-bottom: 1.2rem;
-}
-.main-contents .intro-wrap .text-wrap .desc {
-  font-size: 1.2rem;
-  line-height: 1.5;
-  opacity: 0.6;
 }
 .main-contents .pin-wrap {
   width: 100%;
@@ -245,6 +291,20 @@
 .main-contents .pin-wrap .boxs.box2 .ico-box .ico img {
   width: 100%;
 }
+.main-contents .career-slide {
+  width: 20rem;
+  height: 25rem;
+}
+.main-contents .career-slide .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  background: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+}
 
 .footer {
   position: fixed;
@@ -291,9 +351,6 @@
     font-size: 2.4rem;
     margin-bottom: 1.5rem;
     letter-spacing: -0.25rem;
-  }
-  .main-contents .top-slogan .desc {
-    font-size: 1.35rem;
   }
   .main-contents .box-group {
     padding: 2.5rem 0 4rem;

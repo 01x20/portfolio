@@ -1,6 +1,16 @@
 setInterval(circleFn,3000);
 
 //slide
+const careerSlide = new Swiper('.career-slide', {
+    effect: "cards",
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
+    loopAdditionalSlides : 1,
+    observer: true,
+    observeParents: true,
+});
+
 const boxSlide = new Swiper('.box-slide', {
     loop: true,
     slidesPerView: 3,
@@ -13,11 +23,6 @@ const boxSlide = new Swiper('.box-slide', {
     loopAdditionalSlides : 1,
     observer: true,
     observeParents: true,
-    breakpoints : {
-        580 : {
-            
-        },
-    }
 });
 
 //circle funtion
@@ -52,6 +57,22 @@ ScrollTrigger.create({
         }
     }
 });
+
+//pin
+/*const listPinFn = gsap.timeline();
+listPinFn.from('.points-list .li01', {autoAlpha: 0, duration: 0.3, y: 50})
+         .from('.points-list .li02', {autoAlpha: 0, duration: 0.3, y: 50}, "+=0.3")
+         .from('.points-list .li03', {autoAlpha: 0, duration: 0.3, y: 50}, "+=0.3")
+
+ScrollTrigger.create({
+    animation: listPinFn,
+    trigger: ".points-list",
+    start: "top top",
+    scrub: true,
+    pin: true,
+    pinSpacing: false,
+    anticipatePin: 1,
+});*/
 
 //footer
 const showNav = gsap.from(".footer", {
