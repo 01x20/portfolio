@@ -1,24 +1,14 @@
 setInterval(circleFn,3000);
 
 //slide
-const careerSlide = new Swiper('.career-slide', {
-    effect: "cards",
-    loop: true,
-    centeredSlides: true,
-    grabCursor: true,
-    loopAdditionalSlides : 1,
-    observer: true,
-    observeParents: true,
-});
-
-const boxSlide = new Swiper('.box-slide', {
+const mainrSlide = new Swiper('.js-slide', {
     loop: true,
     slidesPerView: 3,
     slidesPerGroup: 1,
     centeredSlides: true,
-    autoplay: {
+    /*autoplay: {
         delay: 3000,
-    },
+    },*/
     speed: 1000,
     loopAdditionalSlides : 1,
     observer: true,

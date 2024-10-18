@@ -23,6 +23,8 @@
         }
     }
 
+
+    //공통 라인
     .line {
         position:relative;
         font-weight: root.$font-bold;
@@ -38,6 +40,76 @@
             opacity: 0.6;
             z-index: -1;
             background: linear-gradient(89deg, #C0EED3 0%, #B6C8EF 32.6%, #fce8cb 65.98%, #f0b1de 100%);
+        }
+    }
+
+    //공통 슬라이드
+    .js-slide-wrap {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        padding: 6rem 0;
+        margin-top: -3.5rem;
+    }
+
+    .js-slide {
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        width: 45rem;
+
+        .swiper-slide {
+            overflow: visible;
+            padding: 0 0.8rem;
+            width: 22rem;
+
+            &.swiper-slide-active {z-index: 2;}
+        }
+
+        .box-inner {
+            text-align: left;
+            padding: 1rem;
+            background: root.$color-white;
+            border: 2px solid rgba(63, 63, 63, 0.01);
+            min-height: 230px;
+            border-radius: 1.8rem;
+            box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
+
+            &.shadow-type1 {
+                box-shadow: 0 0 6rem rgba(192, 238, 211, .5);
+                
+                .label-line {background: rgb(192, 238, 211);}
+            }
+            &.shadow-type2 {
+                box-shadow: 0 0 6rem rgba(182,200,239,0.5);
+
+                .label-line {background: rgb(182,200,239);}
+            }
+
+            .ico {
+                display: inline-block;
+                width: 6rem;
+                margin-top: -0.5rem;
+
+                img {width: 100%;}
+            }
+            .label-line {
+                display: inline-block;
+                padding: 0 0.5rem;
+                font-size: 0.95rem;
+                border-radius: 100rem;
+                font-weight: root.$font-bold;
+                background: rgb(241, 205, 253);
+                height: 1.2rem;
+                line-height: 1.25rem;
+                margin-top: 0.5rem;
+            }
+            .desc {
+                margin-top: 1rem;
+                font-size: 1rem;
+                line-height: 1.4;
+                letter-spacing: -1px;
+            }
         }
     }
 
@@ -112,79 +184,67 @@
 
     .career-wrap {
         overflow: hidden;
-        padding: 3rem 1.5rem;
-
-        .title-box {
-            margin-bottom: 1rem;
-        }
+        padding: 3rem 0;
 
         .btn-box {
+            max-width: 18rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            padding: 0.5rem 0 0;
+            gap: 0.5rem;
+            margin: 0 auto;
 
             & > button {
-                width: calc(50% - 0.5rem);
-                border-radius: 0.8rem;
+                width: calc(50% - 0.25rem);
+                border-radius: 100rem;
                 font-weight: root.$font-bold;
-                border: 2px solid rgba(0,0,0,0.1);
+                background: root.$text-default;
+                color: root.$color-white;
+                height: 3.2rem;
+                line-height: 3.2rem;
             }
         }
     }
 
-    .career-slide {
-        width: 23.5rem;
-        height: 19.5rem;
-        padding: 2rem 0 1rem;
+    .js-slide.career-slide {
+        width: 62rem;
 
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 18px;
-            font-size: 22px;
-            font-weight: bold;
-            background: root.$color-white;
-            border: 1px solid rgb(227, 227, 227);
-            box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08) inset;
-        }
+        .box-inner {
+            min-height: 195px;
+            text-align: center;
+            padding: 2rem 1rem;
 
-        .inner-box {
-            width: 100%;
-
-            .top {
-                border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
-                padding: 1.2rem 1rem;
-                font-size: 1.4rem;
+            .name {
+                font-size: 1.3rem;
                 text-transform: uppercase;
-                text-align: center;
                 font-weight: root.$font-bold;
+                margin-bottom: 0.4rem;
             }
-            .content {
-                padding: 1.2rem 1.5rem;
-                font-size: 1.2rem;
+            .period {
+                opacity: 0.8;
+                font-size: 1.1rem;
+            }
+            .pj-list {
+                margin-top: 1.6rem;
 
                 li {
-                    padding-left: 1.6rem;
-                    position:relative;
-                    margin-bottom: 1.2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.8rem;
+                    padding-left: 0.4rem;
+                    position: relative;
 
                     &::before {
                         position: absolute;
                         content: '';
-                        width: 1.15rem;
-                        height: 1.15rem;
-                        background: url('../img/ico-careerhist.png')50% 50% no-repeat;
-                        background-size: 100%;
+                        width: 2px;
+                        height: 2px;
+                        border-radius: 100%;
+                        background: root.$text-default;
                         left: 0;
-                        top: -2px;
+                        top: 6px;
                     }
 
-                    &.project {
-                        & > p {margin-bottom: 0.8rem;}
-                        &::before {background-image: url('../img/ico-spark.png');}
-                    }
+                    &:last-child {margin-bottom: 0;}
                 }
             }
         }
@@ -291,75 +351,6 @@
     .box-group {
         padding: 6rem 0;
         text-align: center;
-        
-        .slide-wrap {
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            padding: 6rem 0;
-            margin-top: -3.5rem;
-        }
-
-        .box-slide {
-            overflow: visible;
-            display: flex;
-            justify-content: center;
-            width: 45rem;
-
-            .swiper-slide {
-                overflow: visible;
-                padding: 0 0.8rem;
-                width: 22rem;
-
-                &.swiper-slide-active {z-index: 2;}
-            }
-
-            .box-inner {
-                text-align: left;
-                padding: 1rem;
-                background: root.$color-white;
-                border: 2px solid rgba(63, 63, 63, 0.01);
-                min-height: 230px;
-                border-radius: 1.8rem;
-                box-shadow: 0 0 6rem rgba(241, 205, 253, 0.5);
-
-                &.shadow-type1 {
-                    box-shadow: 0 0 6rem rgba(192, 238, 211, .5);
-                    
-                    .label-line {background: rgb(192, 238, 211);}
-                }
-                &.shadow-type2 {
-                    box-shadow: 0 0 6rem rgba(182,200,239,0.5);
-
-                    .label-line {background: rgb(182,200,239);}
-                }
-
-                .ico {
-                    display: inline-block;
-                    width: 6rem;
-                    margin-top: -0.5rem;
-
-                    img {width: 100%;}
-                }
-                .label-line {
-                    display: inline-block;
-                    padding: 0 0.5rem;
-                    font-size: 0.95rem;
-                    border-radius: 100rem;
-                    font-weight: root.$font-bold;
-                    background: rgb(241, 205, 253);
-                    height: 1.2rem;
-                    line-height: 1.25rem;
-                    margin-top: 0.5rem;
-                }
-                .desc {
-                    margin-top: 1rem;
-                    font-size: 1rem;
-                    line-height: 1.4;
-                    letter-spacing: -1px;
-                }
-            }
-        }
 
         .box-list { display: none; }
     }
