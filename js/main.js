@@ -39,6 +39,8 @@ function circleFn () {
 //pin
 const pinFn = gsap.timeline();
 pinFn.from('.pin-wrap .box2', {autoAlpha: 0, duration: 0.3,}, "+=0.3")
+     .from('.pin-wrap .box3', {autoAlpha: 0, duration: 0.3,}, "+=0.3")
+     .from('.pin-wrap .box4', {autoAlpha: 0, duration: 0.3,}, "+=0.3")
 
 ScrollTrigger.create({
     animation: pinFn,
@@ -47,13 +49,7 @@ ScrollTrigger.create({
     scrub: true,
     pin: true, 
     anticipatePin: 1,
-    onUpdate: (self) => {
-        if (self.progress > 0.5) {
-          document.querySelector('.pin-wrap .box2').classList.add('active');
-        } else {
-          document.querySelector('.pin-wrap .box2').classList.remove('active');
-        }
-    }
+    invalidateOnRefresh: true,
 });
 
 //footer

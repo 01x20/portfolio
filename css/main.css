@@ -15,6 +15,23 @@
   font-size: 1.8rem;
   margin: 0.8rem 0 0;
 }
+.main-contents .line {
+  position: relative;
+  font-weight: 700;
+  display: inline-block;
+}
+.main-contents .line::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 2px);
+  height: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4px;
+  opacity: 0.6;
+  z-index: -1;
+  background: linear-gradient(89deg, #C0EED3 0%, #B6C8EF 32.6%, #fce8cb 65.98%, #f0b1de 100%);
+}
 .main-contents .pin-wrap {
   width: 100%;
   height: 100vh;
@@ -22,68 +39,60 @@
   justify-content: center;
   position: relative;
 }
+.main-contents .pin-wrap .obj-wrap {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.main-contents .pin-wrap .obj-wrap > i {
+  display: block;
+  width: 5rem;
+  position: absolute;
+  animation: objMove 0.3s infinite alternate forwards;
+}
+.main-contents .pin-wrap .obj-wrap > i.obj02 {
+  right: 17%;
+  top: 38%;
+}
+.main-contents .pin-wrap .obj-wrap > i.obj03 {
+  left: 12%;
+  bottom: 33%;
+}
+.main-contents .pin-wrap .obj-wrap > i.obj04 {
+  left: 26%;
+  top: 28%;
+}
+.main-contents .pin-wrap .obj-wrap > i img {
+  width: 100%;
+}
+@keyframes objMove {
+  0% {
+    transform: translateY(-0.15rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .main-contents .pin-wrap .boxs {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
   padding: 2rem 1.5rem;
   overflow: hidden;
-  font-size: 2.3rem;
+  font-size: 1.9rem;
   font-weight: 700;
   text-align: center;
-  line-height: 2;
-}
-.main-contents .pin-wrap .boxs::before {
-  position: absolute;
-  content: "";
-  left: -250%;
-  top: -250%;
-  width: 800%;
-  height: 800%;
-  z-index: -1;
-  background: linear-gradient(38deg, #b8cfff 20%, #eed9ff 33%, #c6ffd3 90%);
-  animation: pinbgani 3s linear infinite;
-}
-@keyframes pinbgani {
-  0% {
-    transform: rotate(0);
-  }
-  10% {
-    transform: rotate(36deg);
-  }
-  20% {
-    transform: rotate(72deg);
-  }
-  30% {
-    transform: rotate(108deg);
-  }
-  40% {
-    transform: rotate(144deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  60% {
-    transform: rotate(216deg);
-  }
-  70% {
-    transform: rotate(252deg);
-  }
-  80% {
-    transform: rotate(288deg);
-  }
-  90% {
-    transform: rotate(324deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  line-height: 1.3;
+  background: #fff url("../img/bg-mokup.png") 52% 50% no-repeat;
+  background-size: 40rem auto;
 }
 .main-contents .intro-wrap {
   display: flex;
@@ -92,7 +101,7 @@
   overflow: hidden;
 }
 .main-contents .intro-wrap .title-box {
-  padding: 4rem 1.5rem 8rem;
+  padding: 3rem 1.5rem 7rem;
 }
 .main-contents .intro-wrap .circle-wrap {
   width: 18rem;
@@ -164,7 +173,7 @@
   border: 2px solid rgb(192, 238, 211);
 }
 .main-contents .intro-wrap .points-text {
-  padding: 6rem 1.5rem 2rem;
+  padding: 6rem 1.5rem 0;
   font-size: 1.2rem;
   line-height: 1.7;
   text-align: center;
@@ -173,25 +182,8 @@
 .main-contents .intro-wrap .points-text .desc {
   margin-top: 0.8rem;
 }
-.main-contents .intro-wrap .points-text .desc .line {
-  position: relative;
-  font-weight: 700;
-  display: inline-block;
-}
-.main-contents .intro-wrap .points-text .desc .line::before {
-  position: absolute;
-  content: "";
-  width: calc(100% + 2px);
-  height: 0.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 4px;
-  opacity: 0.6;
-  z-index: -1;
-  background: linear-gradient(89deg, #C0EED3 0%, #B6C8EF 32.6%, #fce8cb 65.98%, #f0b1de 100%);
-}
 .main-contents .box-group {
-  padding: 3rem 0 2rem;
+  padding: 6rem 0 0;
   text-align: center;
 }
 .main-contents .box-group .slide-wrap {
@@ -199,7 +191,7 @@
   display: flex;
   justify-content: center;
   padding: 6rem 0;
-  margin-top: -4rem;
+  margin-top: -3.5rem;
 }
 .main-contents .box-group .box-slide {
   overflow: visible;
@@ -231,7 +223,7 @@
   background: rgb(192, 238, 211);
 }
 .main-contents .box-group .box-slide .box-inner.shadow-type2 {
-  box-shadow: 0 0 6rem rgba(182, 200, 239, 0.2);
+  box-shadow: 0 0 6rem rgba(182, 200, 239, 0.5);
 }
 .main-contents .box-group .box-slide .box-inner.shadow-type2 .label-line {
   background: rgb(182, 200, 239);
@@ -266,28 +258,80 @@
 }
 .main-contents .career-wrap {
   overflow: hidden;
-  padding: 4rem 1.5rem 2rem;
+  padding: 0 1.5rem 5rem;
+}
+.main-contents .career-wrap .title-box {
+  margin-bottom: 1rem;
+}
+.main-contents .career-wrap .btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 6rem;
+}
+.main-contents .career-wrap .btn-box > button {
+  width: calc(50% - 0.5rem);
+  border-radius: 0.8rem;
+  font-weight: 700;
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }
 .main-contents .career-slide {
-  width: 20rem;
-  height: 28rem;
-  padding: 2rem 1.5rem;
+  width: 23.5rem;
+  height: 19.5rem;
+  padding: 2rem 1.5rem 1rem;
 }
 .main-contents .career-slide .swiper-slide {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   border-radius: 18px;
   font-size: 22px;
   font-weight: bold;
   background: #fff;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(227, 227, 227);
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08) inset;
+}
+.main-contents .career-slide .inner-box {
+  width: 100%;
+}
+.main-contents .career-slide .inner-box .top {
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+.main-contents .career-slide .inner-box .content {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+}
+.main-contents .career-slide .inner-box .content li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.main-contents .career-slide .inner-box .content li::before {
+  position: absolute;
+  content: "";
+  width: 1.15rem;
+  height: 1.15rem;
+  background: url("../img/ico-careerhist.png") 50% 50% no-repeat;
+  background-size: 100%;
+  left: 0;
+  top: -2px;
+}
+.main-contents .career-slide .inner-box .content li.project > p {
+  margin-bottom: 0.8rem;
+}
+.main-contents .career-slide .inner-box .content li.project::before {
+  background-image: url("../img/ico-spark.png");
 }
 
 .footer {
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) !important;
   bottom: 1.5rem;
   z-index: 100;
   max-width: 16rem;
@@ -454,9 +498,6 @@
     background: #fff;
     border-radius: 40px;
     overflow-y: scroll;
-  }
-  .main-contents .pin-wrap .boxs {
-    height: 100vh;
   }
   .footer {
     position: static;
