@@ -3,6 +3,8 @@ setInterval(circleFn,3000);
 //slide
 const careerSlide = new Swiper('.career-slide', {
     effect: "cards",
+    loop: true,
+    centeredSlides: true,
     grabCursor: true,
     loopAdditionalSlides : 1,
     observer: true,
