@@ -94,6 +94,77 @@
   background: #fff url("../img/bg-mokup.png") 52% 50% no-repeat;
   background-size: 40rem auto;
 }
+.main-contents .career-wrap {
+  overflow: hidden;
+  padding: 3rem 1.5rem;
+}
+.main-contents .career-wrap .title-box {
+  margin-bottom: 1rem;
+}
+.main-contents .career-wrap .btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 0rem;
+}
+.main-contents .career-wrap .btn-box > button {
+  width: calc(50% - 0.5rem);
+  border-radius: 0.8rem;
+  font-weight: 700;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.main-contents .career-slide {
+  width: 23.5rem;
+  height: 19.5rem;
+  padding: 2rem 1.5rem 1rem;
+}
+.main-contents .career-slide .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid rgb(227, 227, 227);
+  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08) inset;
+}
+.main-contents .career-slide .inner-box {
+  width: 100%;
+}
+.main-contents .career-slide .inner-box .top {
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+.main-contents .career-slide .inner-box .content {
+  padding: 1.2rem 1.5rem;
+  font-size: 1.2rem;
+}
+.main-contents .career-slide .inner-box .content li {
+  padding-left: 1.6rem;
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+.main-contents .career-slide .inner-box .content li::before {
+  position: absolute;
+  content: "";
+  width: 1.15rem;
+  height: 1.15rem;
+  background: url("../img/ico-careerhist.png") 50% 50% no-repeat;
+  background-size: 100%;
+  left: 0;
+  top: -2px;
+}
+.main-contents .career-slide .inner-box .content li.project > p {
+  margin-bottom: 0.8rem;
+}
+.main-contents .career-slide .inner-box .content li.project::before {
+  background-image: url("../img/ico-spark.png");
+}
 .main-contents .intro-wrap {
   display: flex;
   flex-direction: column;
@@ -183,7 +254,7 @@
   margin-top: 0.8rem;
 }
 .main-contents .box-group {
-  padding: 6rem 0 0;
+  padding: 6rem 0;
   text-align: center;
 }
 .main-contents .box-group .slide-wrap {
@@ -255,77 +326,6 @@
 }
 .main-contents .box-group .box-list {
   display: none;
-}
-.main-contents .career-wrap {
-  overflow: hidden;
-  padding: 0 1.5rem 5rem;
-}
-.main-contents .career-wrap .title-box {
-  margin-bottom: 1rem;
-}
-.main-contents .career-wrap .btn-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0.5rem 1.5rem 6rem;
-}
-.main-contents .career-wrap .btn-box > button {
-  width: calc(50% - 0.5rem);
-  border-radius: 0.8rem;
-  font-weight: 700;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-}
-.main-contents .career-slide {
-  width: 23.5rem;
-  height: 19.5rem;
-  padding: 2rem 1.5rem 1rem;
-}
-.main-contents .career-slide .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  background: #fff;
-  border: 1px solid rgb(227, 227, 227);
-  box-shadow: 0 -3px 4px 0 rgba(0, 0, 0, 0.08) inset;
-}
-.main-contents .career-slide .inner-box {
-  width: 100%;
-}
-.main-contents .career-slide .inner-box .top {
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
-  padding: 1.2rem 1rem;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-}
-.main-contents .career-slide .inner-box .content {
-  padding: 1.2rem 1.5rem;
-  font-size: 1.2rem;
-}
-.main-contents .career-slide .inner-box .content li {
-  padding-left: 1.6rem;
-  position: relative;
-  margin-bottom: 1.2rem;
-}
-.main-contents .career-slide .inner-box .content li::before {
-  position: absolute;
-  content: "";
-  width: 1.15rem;
-  height: 1.15rem;
-  background: url("../img/ico-careerhist.png") 50% 50% no-repeat;
-  background-size: 100%;
-  left: 0;
-  top: -2px;
-}
-.main-contents .career-slide .inner-box .content li.project > p {
-  margin-bottom: 0.8rem;
-}
-.main-contents .career-slide .inner-box .content li.project::before {
-  background-image: url("../img/ico-spark.png");
 }
 
 .footer {
